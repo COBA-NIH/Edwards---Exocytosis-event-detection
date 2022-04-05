@@ -2,7 +2,7 @@
 
 This protocols is a two-step process
   - ImageJ script
-    - Input - timelapse movie (.nd2 file)
+    - Input - timelapse movie
     - Output - .csv file event x,y position and frame number, .tif timelapse
     and tif label image
   - Jupyter notebook
@@ -10,7 +10,7 @@ This protocols is a two-step process
     - Output - pdf with event graphs
 
 The first part of the process is the automatic event detection using ImageJ
-and ImageJ plugin Event_detection_TrackMate
+and ImageJ plugin TrackMate - Event_detection_TrackMate
 
   1. Open "Event_detection_TrackMate" script in Fiji or ImageJ
   1. Make sure the language selected is Python
@@ -35,7 +35,7 @@ Parameters that can be adjusted include
  this might include false events.
  - channel - trackmate can work on images that include more than one channel if
  that is the case select the channel were the events are being detected.
- - link_distance - distance that an event can shift whitin a frame, for static
+ - link_distance - distance that an event can shift within a frame, for static
  events this value should be set close to 0
  - gap_distance - distance that an event can move from frame to frame, for
  static events this value should be set close to 0
@@ -43,8 +43,8 @@ Parameters that can be adjusted include
  two event and still be considered the same event
 
 
-The second part of the process is the filtering of false events and to determine
-vesicle type
+The second part of the process is the filtering of false events and determination
+of the vesicle type, done in a jupyter notebook - Event_filter_graph
 
   1. Open "Event_filter_graph" script in Jupyter notebook (or any other python
   console)
