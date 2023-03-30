@@ -34,9 +34,9 @@ diameter = 0.5  #average diameter of the event in microns
 threshold = 10  #threshold for the event detection larger values will result in less events detected, bright events being detected, 
                 #smaller values will result in more event but this might include false events  
 channel = 1 #trackmate can work on images with more then one channel if that is the case select the channel were the events are being detected
-link_distance = 1 #this set the distance that an event can whitin a frame for static events this value should be set close to 0
-gap_distance = 1 #this set the distance that an event can move from frame to frame, for static events this value should be set close to 0
-gap_frame = 50 #number of frames that can have no event detected between two event and still be considered the same event 
+link_distance = 2 #this set the distance that an event can whitin a frame for static events this value should be set close to 0
+gap_distance = 2 #this set the distance that an event can move from frame to frame, for static events this value should be set close to 0
+gap_frame = 100 #number of frames that can have no event detected between two event and still be considered the same event 
 
 ic =  ImageCalculator();
 reload(sys)
